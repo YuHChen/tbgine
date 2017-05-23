@@ -1,0 +1,11 @@
+# Ignore Emacs backup files
+*~ *#
+
+# Ignore compiled and executable files
+*.o *.exe
+
+# Ignore build folder
+build/
+
+# Ignore packages
+*.tar.gz
