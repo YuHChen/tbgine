@@ -1,6 +1,6 @@
 #include "common/Player.hpp"
 
-namespace boardio {
+namespace tbgine {
 
   Player::Player() : id_("007"), name_("James") { }
   

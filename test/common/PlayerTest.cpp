@@ -4,13 +4,13 @@
 #include <cassert>
 #include <iostream>
 
-class BasicPlayer : public boardio::Player {
+class BasicPlayer : public tbgine::Player {
 public:
   BasicPlayer(const std::string &id, const std::string &name)
-    : boardio::Player(id, name) { }
+    : tbgine::Player(id, name) { }
 
-  boardio::Input onTurn(void) {
-    return boardio::Input();
+  tbgine::Input onTurn(void) {
+    return tbgine::Input();
   }
 };
 
@@ -18,7 +18,7 @@ int main() {
   {
     std::string id = "700";
     std::string name = "Bond";
-    boardio::Player* p1 = new BasicPlayer(id, name);
+    tbgine::Player* p1 = new BasicPlayer(id, name);
     std::cout << *p1 << std::endl;
     delete p1;
   }

@@ -5,7 +5,8 @@ BUILD_DIR := build
 
 # C++ files to build
 SRC_FILES := $(shell find $(SRC_DIR) -type f -name '*.cpp')
-TEST_FILES := common/Player.cpp
+TEST_FILES := common/Player.cpp \
+	common/GameState.cpp
 
 # object files are C++ files with .cpp extension replaced by .o
 # object files are placed into build directory
@@ -42,9 +43,9 @@ tests: $(TESTS)
 
 # phony target to run all tests
 runtests: tests
-	@for test in "$(TESTS)"; do \
-	echo "===== Running $${test} ====="; \
-	$${test}; \
+	@for test in $(TESTS); do \
+	echo "===== Running $$test ====="; \
+	$$test; \
 	echo; \
 	done
 
@@ -53,8 +54,8 @@ clean:
 	find . -type f -name '*.o' -delete
 	find . -type f -name '*.exe' -delete
 	find . -type f -name '*.depends' -delete
-	find . -type f -name '*.~' -delete
-	find . -type f -name '*.#' -delete
+	find . -type f -name '*~' -delete
+	find . -type f -name '*#' -delete
 	rm -rf $(BUILD_DIR)/$(SRC_DIR)/* $(BUILD_DIR)/$(TEST_DIR)/*
 
 # rule to build object files

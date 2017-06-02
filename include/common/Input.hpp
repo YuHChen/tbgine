@@ -1,12 +1,12 @@
 #ifndef INPUT_HPP
 #define INPUT_HPP
 
-namespace boardio {
+namespace tbgine {
 
   class Input {
     
   }; // Input
 
-} // boardio
+} // tbgine
 
 #endif /* INPUT_HPP */

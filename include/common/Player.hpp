@@ -6,7 +6,7 @@
 #include <string>
 #include <ostream>
 
-namespace boardio {
+namespace tbgine {
 
   class Player {
 
@@ -33,6 +33,6 @@ namespace boardio {
   
   }; // Player
 
-} // boardio
+} // tbgine
 
 #endif /* PLAYER_HPP */
