@@ -14,20 +14,24 @@ namespace tbgine {
     Player(const std::string &id, const std::string &name);
     // TODO move constructor
     virtual ~Player();
-
+    
     const std::string &getID(void);
     const std::string &getName(void);
-    void setName(const std::string &name);
+    int getOrder(void);
 
+    void setName(const std::string &name);
+    void setOrder(int order);
+    
     // On this player's turn, prompt for user input
     virtual Input onTurn(void) = 0;
- 
+    
     friend std::ostream &operator<<(std::ostream &out, const Player &p);
 
   protected:
     std::string id_;   // player ID
     std::string name_; // display name
-
+    int order_;        // player's order
+    
   private:
     Player();
   
